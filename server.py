@@ -132,7 +132,7 @@ parser.add_argument("--dir", type=str, default=os.path.abspath('data'))
 parser.add_argument("--no_cors", action='store_true')
 
 if __name__ == '__main__':
-    args = parser.parse_args()
+    # args = parser.parse_args()
     app.run()
     # if not args.no_cors:
     #     CORS(app.app, headers='Content-Type')
