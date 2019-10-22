@@ -133,11 +133,11 @@ parser.add_argument("--no_cors", action='store_true')
 
 if __name__ == '__main__':
     args = parser.parse_args()
+    app.run()
+    # if not args.no_cors:
+    #     CORS(app.app, headers='Content-Type')
 
-    if not args.no_cors:
-        CORS(app.app, headers='Content-Type')
-
-    app.run(port=int(args.port), debug=not args.nodebug, host=args.address)
+    # app.run(port=int(args.port), debug=not args.nodebug, host=args.address)
 else:
     args, _ = parser.parse_known_args()
     # load_projects(args.dir)
